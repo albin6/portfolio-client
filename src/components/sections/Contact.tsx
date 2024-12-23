@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Contact: React.FC = () => (
   <motion.section
@@ -29,13 +30,22 @@ const Contact: React.FC = () => (
       viewport={{ once: true }}
     >
       <Button variant="outline" size="icon">
-        <Github className="h-6 w-6" />
+        <Link to={"https://github.com/albin6"} target="_blank">
+          <Github className="h-6 w-6" />
+        </Link>
       </Button>
       <Button variant="outline" size="icon">
-        <Linkedin className="h-6 w-6" />
+        <Link
+          to={"https://www.linkedin.com/in/albin-aji-aa0ab0312/"}
+          target="_blank"
+        >
+          <Linkedin className="h-6 w-6" />
+        </Link>
       </Button>
       <Button variant="outline" size="icon">
-        <Mail className="h-6 w-6" />
+        <Link to={"mailto:albinpariyarath@gmail.com"} target="_blank">
+          <Mail className="h-6 w-6" />
+        </Link>
       </Button>
     </motion.div>
   </motion.section>

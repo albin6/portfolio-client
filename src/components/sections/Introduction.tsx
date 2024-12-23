@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Introduction: React.FC = () => (
   <motion.section
@@ -45,7 +46,12 @@ const Introduction: React.FC = () => (
         transition={{ delay: 0.6, duration: 0.5 }}
       >
         <Button className="bg-gray-950 text-white" variant="outline" size="lg">
-          Connect Me
+          <Link
+            to={"https://www.linkedin.com/in/albin-aji-aa0ab0312/"}
+            target="_blank"
+          >
+            Connect Me
+          </Link>
         </Button>
       </motion.div>
       <motion.div
