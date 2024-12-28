@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const Projects: React.FC = () => {
   const projects = [
@@ -16,16 +17,19 @@ const Projects: React.FC = () => {
       title: "E-commerce Platform",
       description:
         "A full-stack MERN application with user authentication and payment integration.",
+      href: "https://github.com/albin6/cell-sphere-api",
     },
     {
-      title: "Task Management App",
+      title: "Company Portfolio",
       description:
-        "A React-based app with Node.js backend for managing daily tasks and projects.",
+        "A React and TypeScript-based application with a Node.js backend, designed to manage daily tasks and projects efficiently, offering a modern and scalable solution for company portfolio management.",
+      href: "https://github.com/albin6/dd-portfolio",
     },
     {
       title: "Social Media Dashboard",
       description:
         "A responsive dashboard built with React and Express, integrating various social media APIs.",
+      href: "https://github.com/albin6/cell-sphere-api",
     },
   ];
 
@@ -64,7 +68,11 @@ const Projects: React.FC = () => {
                 <CardDescription>{project.description}</CardDescription>
               </CardContent>
               <CardFooter>
-                <Button variant="outline">View Project</Button>
+                <Button variant="outline">
+                  <Link to={project.href} target="_blank">
+                    View Project
+                  </Link>
+                </Button>
               </CardFooter>
             </Card>
           </motion.div>
