@@ -14,22 +14,28 @@ import { Link } from "react-router-dom";
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: "E-commerce Platform",
+      title: "SocialiteX - Built with Next.js",
+      image:
+        "https://res.cloudinary.com/dkph7vdgg/image/upload/v1736265107/socialitex_kuxjlf.png",
       description:
-        "A full-stack MERN application with user authentication and payment integration.",
-      href: "https://github.com/albin6/cell-sphere-api",
+        "SocialiteX is a responsive social media platform built with a modern tech stack, including Next.js, PostgreSQL, Prisma, ShadCN, Tailwind CSS, and Clerk for secure authentication.",
+      href: "https://socialitex.vercel.app",
     },
     {
-      title: "Company Portfolio",
+      title: "E-commerce Platform - MERN Stack Application",
+      image:
+        "https://res.cloudinary.com/dkph7vdgg/image/upload/v1736265225/cell-sphere_tkefoi.png",
       description:
-        "A React and TypeScript-based application with a Node.js backend, designed to manage daily tasks and projects efficiently, offering a modern and scalable solution for company portfolio management.",
-      href: "https://github.com/albin6/dd-portfolio",
+        "Cell Sphere is a mobile phone e-commerce platform with secure checkout, advanced filtering, and easy navigation. Built using Node.js, Express.js, and MongoDB, it supports JWT and Google OAuth for secure authentication.",
+      href: "https://cell-sphere-shop.vercel.app/signup",
     },
     {
-      title: "Social Media Dashboard",
+      title: "Company Portfolio - React & TypeScript Application",
+      image:
+        "https://res.cloudinary.com/dkph7vdgg/image/upload/v1736265724/dates-qatar_gy5p0m.png",
       description:
-        "A responsive dashboard built with React and Express, integrating various social media APIs.",
-      href: "https://github.com/albin6/cell-sphere-api",
+        "This company portfolio is built with React and TypeScript, utilizing the ShadCN component library for UI elements and Tailwind CSS for styling. It features interactive maps powered by Leaflet.js, offering a modern, responsive design and a seamless user experience.",
+      href: "https://datesqatar.com/",
     },
   ];
 
@@ -64,6 +70,15 @@ const Projects: React.FC = () => {
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
               </CardHeader>
+              <CardContent>
+                <Link to={project.href} target="_blank">
+                  <img
+                    src={project.image}
+                    alt="image"
+                    className="max-w-full rounded "
+                  />
+                </Link>
+              </CardContent>
               <CardContent className="flex-grow">
                 <CardDescription>{project.description}</CardDescription>
               </CardContent>

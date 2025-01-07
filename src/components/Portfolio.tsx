@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import Introduction from "./sections/Introduction";
@@ -7,6 +7,17 @@ import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 
 const Portfolio: React.FC = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      document.documentElement.style.scrollBehavior = "smooth";
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-200 to-gray-100 text-gray-950">
       <Header />
