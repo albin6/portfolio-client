@@ -1,10 +1,10 @@
 import { BrowserRouter } from "react-router-dom";
-import Portfolio from "./updated-components/Portfolio";
+import Portfolio from "./components/Portfolio";
 
 function App() {
   return (
     <BrowserRouter>
-      <Portfolio/>
+      <Portfolio />
     </BrowserRouter>
   );
 }
