@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import resume from "../../assets/AlbinAji-Resume.pdf";
+import resume from "../../assets/AlbinAJi_Resume.pdf";
 
 const Introduction: React.FC = () => {
   return (
