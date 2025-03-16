@@ -1,10 +1,16 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Toaster } from "sonner";
+import NotFound from "./pages/NotFound";
 import Portfolio from "./components/Portfolio";
 
 function App() {
   return (
     <BrowserRouter>
-      <Portfolio />
+      <Toaster richColors />
+      <Routes>
+        <Route path="/" element={<Portfolio/>} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   );
 }

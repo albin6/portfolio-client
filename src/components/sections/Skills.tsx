@@ -4,14 +4,18 @@ import { Badge } from "@/components/ui/badge";
 
 const Skills: React.FC = () => {
   const skills = [
-    "MongoDB",
-    "Express.js",
-    "React",
-    "Node.js",
+    "JavaScript",
     "TypeScript",
+    "MongoDB",
+    "Node.js",
+    "Express.js",
+    "React.js",
+    "RESTful APIs",
+    "GraphQL",
+    "AWS",
+    "GDC",
     "Tailwind CSS",
     "Git",
-    "RESTful APIs",
   ];
 
   return (
